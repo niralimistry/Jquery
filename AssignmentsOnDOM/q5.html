@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var arr = ["car2.gif","car3.gif","car3.gif","car4.gif","car5.gif","car6.gif","car7.gif"];
+        var count = 0;
+
+        $(document).ready(function(){
+           $("#prev").click(function () {
+               if(count===0){
+                   count = arr.length;
+               }
+               $("img").attr("src",arr[count - 1]);
+               count--;
+               //alert(count);
+
+           });
+            $("#next").click(function () {
+                if(count===arr.length){
+                    count = 0;
+                }
+                $("img").attr("src",arr[count + 1]);
+                count++;
+               // alert(count);
+            })
+
+        });
+    </script>
+</head>
+<body>
+<button id="prev">Prev</button>
+<img src="../car2.gif" alt="">
+<button id="next">Next</button>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q10</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#save").click(function () {
+                 f = $("#fn").val();
+                 l = $("#ln").val();
+                gender = $('[name="gender"]').val();
+                alert(gender);
+                cars = $('[name="cars"]').val();
+                alert("hello");
+                //alert($('input[type=radio]').attr("checked"));
+                //alert($('[name="gender"]').is(':checked'));
+//              alert($('input[name]').text());
+//              alert($("#cars option:selected").text());
+//              #availability option:selected").val();
+                // alert($('input[name=gender]:checked').val());
+                /*if (f === "" || l === "" || gender === "" || cars === "") {
+                    alert("please enter all values in form");
+                }
+*/
+                   $("#first").html(f);
+                    $("#last").text(l);
+                    $("#s").text(gender);
+                    $("#g").text(cars);
+                    form1.reset();
+                    $("#edit").attr("disabled",false);
+
+            });
+
+            $("#edit").click(function(){
+                 $("#fn").val(f);
+                 $("#ln").val(l);
+                //$('[name="gender"]').val(gender);
+//                alert($("#radio1").val());
+//                alert(gender);
+
+               if ($("#radio1").val() === gender)
+                {
+                    $("#radio1").attr("checked",true);
+                }
+                if ($("#radio2").val() === gender)
+                {
+                    $("#radio2").attr("checked",true);
+                }
+                if ($("#radio3").val() === gender)
+                {
+                    $("#radio3").attr("checked",true);
+                }
+
+
+//                ($("#radio2").val() === gender).attr("checked",true);
+//                ($("#radio3").val() === gender).attr("checked",true);
+                $('[name="cars"]').val(cars);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="formDiv">
+    <form name="form1">
+        FirstName:<input type="text" id="fn"><br>
+        LastName:<input type="text" id="ln"><br>
+        <p>
+            <input type="radio" name="gender" id="radio1" value="male"> Male<br>
+            <input type="radio" name="gender" id="radio2" value="female"> Female<br>
+            <input type="radio" name="gender" id="radio3" value="other"> Other
+        </p>
+        <p>
+            <select name="cars" id="cars">
+                <option value=""></option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+        </p>
+    </form>
+    <button id="save">Save</button>
+
+</div>
+
+<div id="viewDiv">
+    <p id="first"></p>
+    <p id="last"></p>
+    <p id="g"></p>
+    <p id="s"></p>
+    <button id="edit" disabled>Edit</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#ft').keydown('input', function() {
+                var input=$(this);
+                var is_name=input.val();
+                if(is_name){
+                    input.removeClass("invalid").addClass("valid");
+                    alert("valid");
+                }
+                else{
+                    input.removeClass("valid").addClass("invalid");
+                    alert("invalid");
+
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<form>
+First Tb:<input type="text" id="ft"><br>
+Second Tb:<input type="text" id="st"><br>
+radio1<input type="radio" name="radio1" id="radio1" checked><br>
+radio2<input type="radio" name="radio2" id="radio2" checked><br>
+<select id="dropdown">
+    <option value=""></option>
+    <option value="Default">Default</option>
+    <option value="MakeInvisible">MakeInvisible</option>
+    <option value="ChangeColor">ChangeColor</option>
+    <option value="MakeVisibleAndChangeColor">MakeVisibleAndChangeColor</option>
+</select>
+<button>BUTTON</button>
+</form>
+</body>
+
+</html>

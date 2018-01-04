@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("img").mouseover(function(){
+                alert($(this).attr("alt"));
+            });
+            $("#tb").change(function(){
+               var x =  $(this).val();
+                $("span").html(x);
+            });
+        });
+    </script>
+</head>
+<body>
+<img src="../car1.gif" alt="car1" title="Hooray!" style="float:left"><br>
+<span style="clear:none"></span>
+textbox:<input type="text" id="tb">
+</body>
+</html>

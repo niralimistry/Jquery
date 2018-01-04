@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#t1").keyup(function () {
+                if (!($("#t1").val() === "")) {
+                    $("#t2").val("");
+                    $("#radio2").attr('checked', false);
+                    $("#radio1").attr('checked', true);
+                }
+            });
+            $("#t2").keyup(function () {
+                if (!($("#t2").val() === "")) {
+                    $("#t1").val("");
+                    $("#radio1").attr('checked', false);
+                    $("#radio2").attr('checked', true);
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+radio1<input type="radio" name="radio1" id="radio1"><br>
+radio2<input type="radio" name="radio1" id="radio2"><br>
+t1:<input type="text" id="t1"><br>
+t2:<input type="text" id="t2"><br>
+<button>button</button>
+</body>
+</html>

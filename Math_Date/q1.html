@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#f").on("keyup", function () {
+                var f1 = $(this).val();
+                if(isNaN(f1)){
+                    alert("please enter number");
+                    $("#f").css("border","1px solid red");
+                }
+                var c = Math.round((f1 - 32) * 5 / 9);
+                $("p").html(c);
+            });
+        });
+
+    </script>
+</head>
+<body>
+Fahrenheit:<input type="text" id="f">
+<p></p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q9</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#ft').change(function () {
+                 f = $(this).val();
+            });
+            $('#lt').change(function () {
+                l = $(this).val();
+            });
+            $('#tt').change(function () {
+                t = $(this).val();
+            });
+            $('#b1').click(function () {
+                $("div").html("First:" + f + "Second:" + l + "third:" + t);
+                $(":text").val("");
+            });
+            $('#b2').click(function () {
+                $("div").html("");
+                $('#ft').val(f);
+                $('#lt').val(l);
+                $('#tt').val(t);
+            });
+        });
+    </script>
+</head>
+<body>
+first:<input type="text" id="ft"><br>
+last:<input type="text" id="lt"><br>
+third:<input type="text" id="tt"><br>
+
+
+<button id="b1">b1</button>
+<br>
+<button id="b2">b2</button>
+<br>
+<div></div>
+</body>
+</html>

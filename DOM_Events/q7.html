@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#check").click(function(){
+              $("input:checkbox").prop("checked",true);
+            });
+            $("#uncheck").click(function(){
+                $("input:checkbox").prop("checked",false);
+            });
+
+            $("#validate").click(function(){
+            $('input[type=checkbox]').each(function () {
+                if (this.checked) {
+                    console.log($(this).val());
+                }
+            });
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="checkbox" id="bike" name="vehicle" value="Bike"> I have a bike<br>
+<input type="checkbox" id="car" name="vehicle" value="Car"> I have a car<br>
+<input type="checkbox" id="scooter" name="vehicle" value="scooter"> I have a scooter<br>
+<input type="checkbox" id="bus" name="vehicle" value="bus"> I have a bus<br>
+<input type="checkbox" id="f" name="vehicle" value="f"> I have a f<br>
+<input type="checkbox" id="a" name="vehicle" value="a"> I have a a<br>
+<input type="checkbox" id="b" name="vehicle" value="b"> I have a b<br>
+<input type="checkbox" id="c" name="vehicle" value="c"> I have a c<br>
+<input type="checkbox" id="d" name="vehicle" value="d"> I have a d<br>
+<input type="checkbox" id="e" name="vehicle" value="e"> I have a e<br>
+<button id="check">check</button>
+<button id="uncheck">uncheck</button>
+<button id="validate">validate</button>
+</body>
+</html>

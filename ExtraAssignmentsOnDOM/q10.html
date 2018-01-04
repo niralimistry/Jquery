@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q10</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function (){
+//        $('input[type="radio"]').click(function(){
+//            if ($(this).is(':checked'))
+//            {
+//                alert($(this).val());
+//            }
+//        });
+        $('input:radio[name="radio"]').change(function(){
+            alert("checked");
+        });
+        $('input:checkbox[name="vehicle"]').change(function(){
+            alert("checked");
+        });
+      $("#dropdown").change(function(){
+          var x = $('#dropdown option:selected').val();
+          $("#div").html(x);
+      });
+    });
+</script>
+<body>
+radio1<input type="radio" name="radio" id="radio1" value="radio1"><br>
+radio2<input type="radio" name="radio" id="radio2" value="radio2"><br>
+<select id="dropdown">
+    <option value=""></option>
+    <option value="Default">Default</option>
+    <option value="MakeInvisible">MakeInvisible</option>
+    <option value="ChangeColor">ChangeColor</option>
+    <option value="MakeVisibleAndChangeColor">MakeVisibleAndChangeColor</option>
+</select><br>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+<input type="checkbox" name="vehicle" value="Car">I have a car<br>
+<input type="checkbox" name="vehicle" value="a">a<br>
+<input type="checkbox" name="vehicle" value="b">b<br>
+<input type="checkbox" name="vehicle" value="c">c<br>
+<input type="checkbox" name="vehicle" value="d">d<br>
+
+<div id="div"></div>
+</body>
+
+</html>

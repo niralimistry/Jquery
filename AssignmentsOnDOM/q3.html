@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+               var first =  $("#first").val();
+               $("#second").val(first);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>Click it</button>
+First:<input type="text" name="firstTb" id="first">
+Second:<input type="text" name="secondTb" id="second">
+</body>
+</html>
+
+
+

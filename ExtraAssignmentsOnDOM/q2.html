@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#ft').change(function () {
+                var x = $('#ft').val();
+                setTimeout(function () {
+                    $('#st').val(x);
+                    $('#ft').val("");
+                }, 800);
+            });
+            $('#textfield').change(function () {
+                var x = $('#textfield').val();
+                if(!((x === "red") || (x==="black"))){
+                    alert("Please enter red or black only !!");
+                }
+                else if(x === "red"){
+                    $("#div").css("border","red solid 1px");
+                }
+                else if(x === "black"){
+                    $("#div").css("border","black solid 1px");
+                }
+                else{
+                    alert("Please enter valid color only !!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+First Tb:<input type="text" id="ft"><br>
+Second Tb:<input type="text" id="st"><br>
+radio1<input type="radio" id="radio1" checked><br>
+radio2<input type="radio" id="radio2" checked><br>
+<div id="div">div</div>
+<br>
+textfield<input type="text" id="textfield"><br>
+<button>BUTTON</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var arr = ["car1.gif","car2.gif","car3.gif","car4.gif","car5.gif","car6.gif","car7.gif"];
+              var i = 1;
+                setInterval(function () {
+                    $("img").attr("src",arr[i]);
+                   i++;
+                }, 800);
+        });
+    </script>
+</head>
+<body>
+<img src="car1.gif" alt="car1">
+</body>
+</html>

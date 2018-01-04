@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="jquery-3.2.1.min%20(1).js"></script>
+    <!-- jQuery library -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "taskrunner.txt", success: function (result) {
+                    $("#div1").html(result);
+                    arr = JSON.parse(result);
+                    console.log(JSON.parse(result));
+                    $.each(arr, function (index, value) {
+                        $("table").append('<tr><td>' + arr[index].name + '</td><td>' + arr[index].date + '</td><td>' + arr[index].assigned + '</td></tr>');
+                    });
+                }
+            });
+            $('#form1').submit(function(e) {
+                e.preventDefault();
+                var ft = $("#f").val();
+                var st = $("#s").val();
+                var tt = $("#t").val();
+                var a = $(this).serialize();
+                $("table tr:first").remove();
+                $("table").prepend('<tr><td>'+ ft +'</td><td>' + st +'</td><td>'+ tt +'</td></tr>')
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Task Tracker</h1>
+    <div class="jumbotron" style="margin-top: 60px">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <form id='form1' method='post'>
+                    TaskName:<br><input type="text" class="form-control" name="name" id="f"><br>
+                    Date:<br><input type="text" class="form-control" name="date" id="s"><br>
+                    Assigned:<br><input type="text" class="form-control" name="assigned" id="t"><br>
+                    <input type='submit' class='update_appointment_button' value='submit' />
+                </form>
+            </div>
+            <div class="col-sm-6">
+                Existing Tasks:
+                <br>
+                <br>
+                <table class="table table-bordered table-striped">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

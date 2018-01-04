@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#f").keyup(function(){
+               var f = $("#f").val();
+               if(isNaN(f)){
+                   $("#f").css("background-color", "yellow");
+               }
+               var c = Math.round((f-32)*5/9);
+                $("#c").val(c);
+                $("#convert1").html("Celcius to Fahrenheit :" + c);
+            });
+        });
+    </script>
+
+</head>
+<body>
+Fahrenheit:   <input id="f"><br>
+<div id="convert1"></div>
+Celcius: <input id="c"><br>
+
+</body>
+</html>

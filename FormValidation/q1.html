@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var f = $("#firstname").val();
+                var l = $("#lastname").val();
+
+                if ((!(isNaN(f))) || (f === " ")) {
+                    $("#firstname").css({backgroundColor: "red"});
+                    alert("Write your First Name and in string");
+                }
+                if ((!(isNaN(l))) || (l === " ")) {
+                    $("#lastname").css({backgroundColor: "red"});
+                    alert("Write your Last Name and in string");
+                }
+                if ($("#radio1").prop("checked") === true){}
+                else if ($("#radio2").prop("checked") === true) {}
+                else if ($("#radio3").prop("checked") === true) {}
+                else {
+                    alert("Please select a Gender !!");
+                }
+
+               var cars =  $("#cars").val();
+                if(cars===""){
+                    alert("please select atleast one dropdown");
+                }
+
+                if($("#cb1").prop("checked") === true){}
+                else if($("#cb2").prop("checked") === true){}
+                else{
+                    alert("Please select atleast one checkbox");}
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<form action="" onsubmit="return false">
+    <p>
+        <label for="firstname">Firstname</label>
+        <input id="firstname" name="firstname" type="text">
+    </p>
+    <p>
+        <label for="lastname">Lastname</label>
+        <input id="lastname" name="lastname" type="text">
+    </p>
+
+    <p>
+        <input type="radio" name="gender" id="radio1" value="male"> Male<br>
+        <input type="radio" name="gender" id="radio2" value="female"> Female<br>
+        <input type="radio" name="gender" id="radio3" value="other"> Other
+    </p>
+    <p>
+        <input type="checkbox" name="vehicle" value="Bike" id="cb1"> I have a bike<br>
+        <input type="checkbox" name="vehicle" value="Car" id="cb2"> I have a car<br>
+    </p>
+    <p>
+        <select name="cars" id="cars">
+            <option value=""></option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+    </p>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

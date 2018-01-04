@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#dropdown').change(function () {
+                var x = $("#dropdown option:selected").val();
+                if (x === "MakeInvisible") {
+                    $("p").css("visibility", "hidden");
+                }
+                else if (x === "Default") {
+                    $("p").removeAttr('style');
+                    alert("Default");
+                }
+                else if (x === "ChangeColor") {
+                    $("p").css({"visibility":"visible","background-color": "yellow", "font-size": "200%"});
+                }
+                else if (x === "MakeVisibleAndChangeColor") {
+                    $("p").css({"visibility":"visible","background-color": "red", "font-size": "200%"});
+                }
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+<select id="dropdown">
+    <option value=""></option>
+    <option value="Default">Default</option>
+    <option value="MakeInvisible">MakeInvisible</option>
+    <option value="ChangeColor">ChangeColor</option>
+    <option value="MakeVisibleAndChangeColor">MakeVisibleAndChangeColor</option>
+</select>
+<p>Helooo</p>
+</body>
+</html>

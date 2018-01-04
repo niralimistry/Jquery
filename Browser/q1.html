@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+//            if ($.browser.mozilla && $.browser.version >= "2.0" ){
+//                alert('Mozilla above 1.9');
+//            }
+
+            if( $.browser.safari ){
+                alert('Safari');
+            }
+
+            if( $.browser.opera){
+                alert('Opera');
+            }
+
+            if ($.browser.msie && $.browser.version <= 6 ){
+                alert('IE 6 or below version');
+            }
+
+            if ($.browser.msie && $.browser.version > 6){
+                alert('IE above 6');
+            }
+        });
+
+    </script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

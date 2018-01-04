@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q9</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+        var c = 1;
+        $("#checkUrl").click(function () {
+            $("li").each(function (index) {
+                alert($(this).text());
+                var a = $(this).text();
+                if (a === "www.protekconsulting.com")
+                    return false;
+                else
+                    c = 0;
+                // alert(c);
+//            else{
+//                $("#addLink").attr("disabled",false);
+//                $("ul").append('<li>www.protekconsulting.com</li>');
+//                $("ul li:last").after('<li>www.protekconsulting.com</li>');
+
+            });
+            if(c === 0){
+                $("#addLink").attr("disabled", false).click(function () {
+                    if (c === 0) {
+                       // $("ul").append('<li>www.protekconsulting.com</li>');
+                         $("ul li:last").after('<li>www.protekconsulting.com</li>');
+                    }
+                });
+            }
+//            $("#addLink").click(function () {
+//                if (c === 0) {
+//                    $("ul").append('<li>www.protekconsulting.com</li>');
+//                    // $("ul li:last").after('<li>www.protekconsulting.com</li>');
+//                }
+//            });
+        });
+
+    });
+    //           ul li:last
+</script>
+
+<body>
+<button type="button" id="checkUrl">CHECK URL</button>
+<button type="button" id="addLink" disabled>ADD LINK</button>
+<ul>
+    <li>https://www.google.com</li>
+    <li>https://stackoverflow.com/questions/1200621/how-do-i-declare-and-initialize-an-array-in-java</li>
+    <li>www.yahoo.com</li>
+    <li>www.w3schools.com</li>
+    <li>mail.google.com</li>
+
+</ul>
+
+
+</body>
+</html>

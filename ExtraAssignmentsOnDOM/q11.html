@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>q10</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('input[type="text"]').change(function () {
+                var x = $(this).val();
+                if (x.length > 1) {
+                    if (!(isNaN(x))) {
+                        alert("number");
+                    }
+                    else (isNaN(x))
+                    {
+                        alert("string");
+                    }
+                }
+                else if (x.length === 1) {
+                    if (isNaN(x)) {
+                        alert("alphabet");
+                    }
+                    else {
+                        alert("number");
+                    }
+                }
+            });
+            $('input:radio[name="radio"]').change(function () {
+                if ($("#radio1").prop("checked")) {
+                    $("#r1").html("selected");
+                } else {
+                    $("#r1").html("not selected");
+                }
+
+                if ($("#radio2").prop("checked")) {
+                    $("#r2").html("selected");
+                } else {
+                    $("#r2").html("not selected");
+                }
+            });
+            $('input:checkbox[name="vehicle"]').change(function () {
+                if ($("#bike").prop("checked")) {
+                    $("#one").html("checked");
+                } else {
+                    $("#one").html("unchecked");
+                }
+                if ($("#car").prop("checked")) {
+                    $("#two").html("checked");
+                } else {
+                    $("#two").html("unchecked");
+                }
+                if ($("#a").prop("checked")) {
+                    $("#three").html("checked");
+                } else {
+                    $("#three").html("unchecked");
+                }
+                if ($("#b").prop("checked")) {
+                    $("#four").html("checked");
+                } else {
+                    $("#four").html("unchecked");
+                }
+                if ($("#c").prop("checked")) {
+                    $("#five").html("checked");
+                } else {
+                    $("#five").html("unchecked");
+                }
+                if ($("#d").prop("checked")) {
+                    $("#six").html("checked");
+                } else {
+                    $("#six").html("unchecked");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<form>
+    first:<input type="text" id="ft"><br>
+    last:<input type="text" id="lt"><br>
+    third:<input type="text" id="tt"><br>
+    radio1<input type="radio" name="radio" id="radio1" value="radio1">
+    <p id="r1"></p><br>
+    radio2<input type="radio" name="radio" id="radio2" value="radio2">
+    <p id="r2"></p><br>
+    <select id="dropdown">
+        <option value=""></option>
+        <option value="Default">Default</option>
+        <option value="MakeInvisible">MakeInvisible</option>
+        <option value="ChangeColor">ChangeColor</option>
+        <option value="MakeVisibleAndChangeColor">MakeVisibleAndChangeColor</option>
+    </select><br>
+    <input type="checkbox" id="bike" name="vehicle" value="Bike">I have a bike<br>
+    <p id="one"></p>
+    <input type="checkbox" id="car" name="vehicle" value="Car">I have a car<br>
+    <p id="two"></p>
+    <input type="checkbox" id="a" name="vehicle" value="a">a<br>
+    <p id="three"></p>
+    <input type="checkbox" id="b" name="vehicle" value="b">b<br>
+    <p id="four"></p>
+    <input type="checkbox" id="c" name="vehicle" value="c">c<br>
+    <p id="five"></p>
+    <input type="checkbox" id="d" name="vehicle" value="d">d<br>
+    <p id="six"></p>
+    <button id="submit">submit</button>
+</form>
+</body>
+</html>
